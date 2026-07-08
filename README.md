@@ -8,7 +8,9 @@ High-quality MP4 → GIF conversion that runs entirely in your browser.
 
 - Drop in any video your browser can play (MP4, MOV, WebM…)
 - Frames are decoded locally with a `<video>` element and a canvas — **nothing is uploaded**
-- Each frame is quantized to its **own 256-color palette** (the same trick [gifski](https://gif.ski) uses), which keeps on-screen text and gradients crisp instead of muddy
+- Frames with ≤256 unique colors (typical for screen recordings and UI captures) are encoded with their **exact palette — bit-for-bit lossless**, verified by round-trip tests
+- Richer frames get their **own dedicated 256-color palette** (the same trick [gifski](https://gif.ski) uses), which keeps on-screen text and gradients crisp instead of muddy
+- Downscaling (if you choose it) uses the browser's highest-quality resampling — no jagged or pixelated edges
 - Encoding by [gifenc](https://github.com/mattdesl/gifenc) (MIT), vendored in `gifenc.esm.js`
 
 ## Options

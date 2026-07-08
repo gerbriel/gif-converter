@@ -81,7 +81,7 @@
 </head>
 <body>
   <h1>MP4 → GIF</h1>
-  <p class="tagline">High-quality conversion, right in your browser. Every frame gets its own color palette, so on-screen text stays crisp. Nothing is uploaded anywhere.</p>
+  <p class="tagline">High-quality conversion, right in your browser. Frames with ≤256 colors are encoded pixel-perfect with zero quantization; the rest get their own dedicated palette, so on-screen text stays crisp. Nothing is uploaded anywhere.</p>
 
   <div class="card">
     <div id="drop">
@@ -186,6 +186,26 @@ function seekTo(t) {
 
 const nextFrame = () => new Promise(r => requestAnimationFrame(r));
 
+// If a frame has <=256 unique colors (typical for screen recordings and UI),
+// encode it with its exact palette — bit-for-bit lossless, no quantization at all.
+function exactPalette(data) {
+  const seen = new Map();
+  const index = new Uint8Array(data.length / 4);
+  for (let i = 0, p = 0; i < data.length; i += 4, p++) {
+    const key = (data[i] << 16) | (data[i + 1] << 8) | data[i + 2];
+    let idx = seen.get(key);
+    if (idx === undefined) {
+      if (seen.size === 256) return null;
+      idx = seen.size;
+      seen.set(key, idx);
+    }
+    index[p] = idx;
+  }
+  const palette = [];
+  for (const key of seen.keys()) palette.push([(key >> 16) & 255, (key >> 8) & 255, key & 255]);
+  return { palette, index };
+}
+
 convertBtn.addEventListener('click', async () => {
   if (!currentFile || !video.duration) return;
   convertBtn.disabled = true;
@@ -209,18 +229,27 @@ convertBtn.addEventListener('click', async () => {
     canvas.width = width;
     canvas.height = height;
     const ctx = canvas.getContext('2d', { willReadFrequently: true });
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high'; // best resampling when scaling down — no jagged edges
 
     video.pause();
     const gif = GIFEncoder();
+    let losslessFrames = 0;
 
     for (let i = 0; i < totalFrames; i++) {
       await seekTo(i / fps);
       ctx.drawImage(video, 0, 0, width, height);
       const { data } = ctx.getImageData(0, 0, width, height);
-      // A fresh palette per frame is what keeps text and gradients sharp
-      const palette = quantize(data, 256);
-      const index = applyPalette(data, palette);
-      gif.writeFrame(index, width, height, { palette, delay });
+      // Lossless exact palette when possible; otherwise a fresh palette
+      // per frame, which is what keeps text and gradients sharp
+      let frame = exactPalette(data);
+      if (frame) {
+        losslessFrames++;
+      } else {
+        const palette = quantize(data, 256);
+        frame = { palette, index: applyPalette(data, palette) };
+      }
+      gif.writeFrame(frame.index, width, height, { palette: frame.palette, delay });
 
       progressFill.style.width = `${((i + 1) / totalFrames) * 100}%`;
       progressLabel.textContent = `Encoding frame ${i + 1} of ${totalFrames}…`;
@@ -236,7 +265,10 @@ convertBtn.addEventListener('click', async () => {
     downloadLink.href = url;
     downloadLink.download = (currentFile.name.replace(/\.[^.]+$/, '') || 'output') + '.gif';
     const mb = blob.size / (1024 * 1024);
-    resultMeta.textContent = `${width}×${height} · ${fps} fps · ${totalFrames} frames · ${mb >= 1 ? mb.toFixed(1) + ' MB' : Math.round(blob.size / 1024) + ' KB'}`;
+    const quality = losslessFrames === totalFrames ? 'pixel-perfect (no quantization)'
+      : losslessFrames > 0 ? `${losslessFrames}/${totalFrames} frames pixel-perfect`
+      : 'per-frame palettes';
+    resultMeta.textContent = `${width}×${height} · ${fps} fps · ${totalFrames} frames · ${mb >= 1 ? mb.toFixed(1) + ' MB' : Math.round(blob.size / 1024) + ' KB'} · ${quality}`;
     result.style.display = 'block';
     progressLabel.textContent = 'Done!';
   } catch (err) {
