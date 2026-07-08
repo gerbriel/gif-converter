@@ -1,0 +1,41 @@
+name: gifski
+summary: gifski
+description: |
+   GIF encoder based on libimagequant (pngquant).
+   Squeezes maximum possible quality from the awful
+   GIF format. https://gif.ski
+
+version: git
+
+grade: stable
+base: core22
+confinement: strict
+
+apps:
+  gifski:
+    command: bin/gifski
+    plugs:
+    - home
+    - removable-media
+
+parts:
+  gifski:
+    source: https://github.com/ImageOptim/gifski.git
+    plugin: rust
+    rust-features:
+      - video
+    build-packages:
+      - pkg-config
+      - ffmpeg
+      - libavcodec-dev
+      - libavdevice-dev
+      - libavfilter-dev
+      - libavformat-dev
+      - libavutil-dev
+      - libswresample-dev
+      - libswscale-dev
+      - libclang-15-dev
+    stage-packages:
+      - ffmpeg
+      - freeglut3 # dep leak from one of ffmpeg dev libs?
+      - libglu1-mesa

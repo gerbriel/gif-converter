@@ -1,0 +1,928 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 100;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CBD7F2E2E0F044C00E2C5E4 /* ExportModifiedVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD7F2D2E0F044C00E2C5E4 /* ExportModifiedVideo.swift */; };
+		0E7925282329BDBE00058B94 /* Share Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0E79251B2329BDBE00058B94 /* Share Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8588EB0D22A424B800030A59 /* ResizableDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8588EB0C22A424B800030A59 /* ResizableDimensions.swift */; };
+		85A5C44822CA41B500CAA94D /* VideoValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A5C44722CA41B500CAA94D /* VideoValidator.swift */; };
+		C2040B8920435871004EE259 /* GifskiWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2040B8820435871004EE259 /* GifskiWrapper.swift */; };
+		E30C8EEF29387E7A002E053F /* Gifski.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C8EEE29387E7A002E053F /* Gifski.swift */; };
+		E31054142DCBEBA1008B7E7F /* libgifski_static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E310540F2DCBEB4A008B7E7F /* libgifski_static.a */; };
+		E31A4F3124AD36870097B1A5 /* InternetAccessPolicy.json in Resources */ = {isa = PBXBuildFile; fileRef = E31A4F2C24AD36870097B1A5 /* InternetAccessPolicy.json */; };
+		E3339E932395766800303839 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = E3339E922395766800303839 /* Defaults */; };
+		E3339E9D2395789500303839 /* DockProgress in Frameworks */ = {isa = PBXBuildFile; productRef = E3339E9C2395789500303839 /* DockProgress */; };
+		E33552EF2ACAC3190023AAE9 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33552EE2ACAC3190023AAE9 /* MainScreen.swift */; };
+		E33552F12ACAC3280023AAE9 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33552F02ACAC3280023AAE9 /* AppState.swift */; };
+		E33552F32ACAC5D80023AAE9 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33552F22ACAC5D80023AAE9 /* StartScreen.swift */; };
+		E339F011203820ED003B78FB /* GIFGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E339F010203820ED003B78FB /* GIFGenerator.swift */; };
+		E33A02D12F346A9200FD4360 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33A02D02F346A8F00FD4360 /* SettingsScreen.swift */; };
+		E36BD7A52B9E2C2400B8D86C /* ExtendedAttributes in Frameworks */ = {isa = PBXBuildFile; productRef = E36BD7A42B9E2C2400B8D86C /* ExtendedAttributes */; };
+		E37F68E02ACAD9D1007F1A7F /* CompletedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F68DF2ACAD9D1007F1A7F /* CompletedScreen.swift */; };
+		E37F68E22ACAD9F1007F1A7F /* ConversionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F68E12ACAD9F1007F1A7F /* ConversionScreen.swift */; };
+		E37F68E42ACADA40007F1A7F /* EditScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F68E32ACADA40007F1A7F /* EditScreen.swift */; };
+		E3908B7426754568000723A7 /* EstimatedFileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3908B7326754568000723A7 /* EstimatedFileSize.swift */; };
+		E3961F802AC9F2A700708EB7 /* Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3961F7F2AC9F2A700708EB7 /* Intents.swift */; };
+		E3A6BD112245345C00F62256 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6BD102245345C00F62256 /* Constants.swift */; };
+		E3AE62871E5CD2F300035A2F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE62861E5CD2F300035A2F /* App.swift */; };
+		E3AE62891E5CD2F300035A2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3AE62881E5CD2F300035A2F /* Assets.xcassets */; };
+		E3AE7E9B2E8AE01F00D22FF8 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = E3AE7E9A2E8AE01F00D22FF8 /* Sentry */; };
+		E3AE7E9D2E8AE0A100D22FF8 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = E3AE7E9C2E8AE0A100D22FF8 /* AppIcon.icon */; };
+		E3C3DB4F203F154300CB8BB9 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E3C3DB4E203F154300CB8BB9 /* Credits.rtf */; };
+		E3D08F6E1E5D7BFD00F465DF /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D08F6D1E5D7BFD00F465DF /* Utilities.swift */; };
+		E3FC365C2377FA0000CF7C59 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC365B2377FA0000CF7C59 /* Shared.swift */; };
+		E3FC365E2377FA9F00CF7C59 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC365B2377FA0000CF7C59 /* Shared.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0E7925262329BDBE00058B94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3AE627B1E5CD2F300035A2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E79251A2329BDBE00058B94;
+			remoteInfo = ShareExtension;
+		};
+		5FF0DFFC278BA5E200A80F09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F6ABD7D278BA5A20040DDF0 /* gifski.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CA007E48158959EA34BF617B;
+			remoteInfo = "gifski-staticlib";
+		};
+		E310540E2DCBEB4A008B7E7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F6ABD7D278BA5A20040DDF0 /* gifski.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA007E4815895A689885C260;
+			remoteInfo = "gifski.a (static library)";
+		};
+		E33380752F30AD1500BDE628 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3AE627B1E5CD2F300035A2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3AE62821E5CD2F300035A2F;
+			remoteInfo = Gifski;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0E7925292329BDBE00058B94 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				0E7925282329BDBE00058B94 /* Share Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0CBD7F2D2E0F044C00E2C5E4 /* ExportModifiedVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportModifiedVideo.swift; sourceTree = "<group>"; };
+		0E79251B2329BDBE00058B94 /* Share Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Share Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F6ABD7D278BA5A20040DDF0 /* gifski.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gifski.xcodeproj; path = "gifski-api/gifski.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		8588EB0C22A424B800030A59 /* ResizableDimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ResizableDimensions.swift; sourceTree = "<group>"; usesTabs = 1; };
+		85A5C44722CA41B500CAA94D /* VideoValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = VideoValidator.swift; sourceTree = "<group>"; usesTabs = 1; };
+		C2040B8820435871004EE259 /* GifskiWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GifskiWrapper.swift; sourceTree = "<group>"; usesTabs = 1; };
+		E304EB8725F3A4D2003BCE1F /* gifski.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gifski.h; path = "gifski-api/gifski.h"; sourceTree = SOURCE_ROOT; };
+		E30C8EEE29387E7A002E053F /* Gifski.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gifski.swift; sourceTree = "<group>"; };
+		E31A4F2C24AD36870097B1A5 /* InternetAccessPolicy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InternetAccessPolicy.json; sourceTree = "<group>"; };
+		E33380712F30AD1500BDE628 /* GifskiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GifskiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E33552EE2ACAC3190023AAE9 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		E33552F02ACAC3280023AAE9 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		E33552F22ACAC5D80023AAE9 /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
+		E339F010203820ED003B78FB /* GIFGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GIFGenerator.swift; sourceTree = "<group>"; usesTabs = 1; };
+		E33A02D02F346A8F00FD4360 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		E37F68DF2ACAD9D1007F1A7F /* CompletedScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedScreen.swift; sourceTree = "<group>"; };
+		E37F68E12ACAD9F1007F1A7F /* ConversionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionScreen.swift; sourceTree = "<group>"; };
+		E37F68E32ACADA40007F1A7F /* EditScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreen.swift; sourceTree = "<group>"; };
+		E3805F542466E68900489E6C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		E3908B7326754568000723A7 /* EstimatedFileSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatedFileSize.swift; sourceTree = "<group>"; };
+		E3961F7F2AC9F2A700708EB7 /* Intents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intents.swift; sourceTree = "<group>"; };
+		E3A6BD102245345C00F62256 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Constants.swift; sourceTree = "<group>"; usesTabs = 1; };
+		E3ACE84E2F0EC74C004F95CC /* maintaining.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = maintaining.md; sourceTree = "<group>"; };
+		E3AE62831E5CD2F300035A2F /* Gifski.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gifski.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3AE62861E5CD2F300035A2F /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = App.swift; sourceTree = "<group>"; usesTabs = 1; };
+		E3AE62881E5CD2F300035A2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3AE628D1E5CD2F300035A2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3AE7E9C2E8AE0A100D22FF8 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
+		E3BF14CC1E5CD5A30049FD4B /* Gifski.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gifski.entitlements; sourceTree = "<group>"; };
+		E3C3DB4E203F154300CB8BB9 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		E3D08F6D1E5D7BFD00F465DF /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Utilities.swift; sourceTree = "<group>"; usesTabs = 1; };
+		E3FC365B2377FA0000CF7C59 /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = Shared.swift; path = Gifski/Shared.swift; sourceTree = SOURCE_ROOT; usesTabs = 1; };
+		E3FD6190201BCBC30087160A /* Gifski-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "Gifski-Bridging-Header.h"; sourceTree = "<group>"; usesTabs = 1; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E3F70E992F9BD79700A92B4B /* Exceptions for "Share Extension" folder in "Share Extension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ShareController.swift,
+				Utilities.swift,
+			);
+			target = 0E79251A2329BDBE00058B94 /* Share Extension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E31053F12DCBD2EA008B7E7F /* Crop */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Crop;
+			sourceTree = "<group>";
+		};
+		E31053F82DCBD325008B7E7F /* Components */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E33380722F30AD1500BDE628 /* Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E39128F52E0DF96C0010E6CF /* Preview */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Preview;
+			sourceTree = "<group>";
+		};
+		E3F70E962F9BD79600A92B4B /* Share Extension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E3F70E992F9BD79700A92B4B /* Exceptions for "Share Extension" folder in "Share Extension" target */,
+			);
+			path = "Share Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E7925182329BDBE00058B94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		E333806E2F30AD1500BDE628 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		E3AE62801E5CD2F300035A2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				E3AE7E9B2E8AE01F00D22FF8 /* Sentry in Frameworks */,
+				E31054142DCBEBA1008B7E7F /* libgifski_static.a in Frameworks */,
+				E36BD7A52B9E2C2400B8D86C /* ExtendedAttributes in Frameworks */,
+				E3339E932395766800303839 /* Defaults in Frameworks */,
+				E3339E9D2395789500303839 /* DockProgress in Frameworks */,
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F6ABD7E278BA5A20040DDF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E310540F2DCBEB4A008B7E7F /* libgifski_static.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E356A15D21028942000148AD /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E3AE7E9C2E8AE0A100D22FF8 /* AppIcon.icon */,
+				E3FD6190201BCBC30087160A /* Gifski-Bridging-Header.h */,
+				E304EB8725F3A4D2003BCE1F /* gifski.h */,
+				E3C3DB4E203F154300CB8BB9 /* Credits.rtf */,
+				E3AE628D1E5CD2F300035A2F /* Info.plist */,
+				E3BF14CC1E5CD5A30049FD4B /* Gifski.entitlements */,
+				E31A4F2C24AD36870097B1A5 /* InternetAccessPolicy.json */,
+				5F6ABD7D278BA5A20040DDF0 /* gifski.xcodeproj */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		E3AE627A1E5CD2F300035A2F = {
+			isa = PBXGroup;
+			children = (
+				E3ACE84E2F0EC74C004F95CC /* maintaining.md */,
+				E3805F542466E68900489E6C /* Config.xcconfig */,
+				E3AE62851E5CD2F300035A2F /* Gifski */,
+				E3F70E962F9BD79600A92B4B /* Share Extension */,
+				E33380722F30AD1500BDE628 /* Tests */,
+				E3AE62841E5CD2F300035A2F /* Products */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		E3AE62841E5CD2F300035A2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3AE62831E5CD2F300035A2F /* Gifski.app */,
+				0E79251B2329BDBE00058B94 /* Share Extension.appex */,
+				E33380712F30AD1500BDE628 /* GifskiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E3AE62851E5CD2F300035A2F /* Gifski */ = {
+			isa = PBXGroup;
+			children = (
+				E3AE62861E5CD2F300035A2F /* App.swift */,
+				E3A6BD102245345C00F62256 /* Constants.swift */,
+				E33552F02ACAC3280023AAE9 /* AppState.swift */,
+				E3FC365B2377FA0000CF7C59 /* Shared.swift */,
+				E33552EE2ACAC3190023AAE9 /* MainScreen.swift */,
+				E33552F22ACAC5D80023AAE9 /* StartScreen.swift */,
+				E37F68E32ACADA40007F1A7F /* EditScreen.swift */,
+				E33A02D02F346A8F00FD4360 /* SettingsScreen.swift */,
+				0CBD7F2D2E0F044C00E2C5E4 /* ExportModifiedVideo.swift */,
+				E37F68E12ACAD9F1007F1A7F /* ConversionScreen.swift */,
+				E37F68DF2ACAD9D1007F1A7F /* CompletedScreen.swift */,
+				E3908B7326754568000723A7 /* EstimatedFileSize.swift */,
+				E339F010203820ED003B78FB /* GIFGenerator.swift */,
+				E30C8EEE29387E7A002E053F /* Gifski.swift */,
+				C2040B8820435871004EE259 /* GifskiWrapper.swift */,
+				8588EB0C22A424B800030A59 /* ResizableDimensions.swift */,
+				85A5C44722CA41B500CAA94D /* VideoValidator.swift */,
+				E3961F7F2AC9F2A700708EB7 /* Intents.swift */,
+				E31053F12DCBD2EA008B7E7F /* Crop */,
+				E31053F82DCBD325008B7E7F /* Components */,
+				E39128F52E0DF96C0010E6CF /* Preview */,
+				E3D08F6D1E5D7BFD00F465DF /* Utilities.swift */,
+				E3AE62881E5CD2F300035A2F /* Assets.xcassets */,
+				E356A15D21028942000148AD /* Other */,
+			);
+			path = Gifski;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E79251A2329BDBE00058B94 /* Share Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E7925302329BDBE00058B94 /* Build configuration list for PBXNativeTarget "Share Extension" */;
+			buildPhases = (
+				0E7925172329BDBE00058B94 /* Sources */,
+				0E7925182329BDBE00058B94 /* Frameworks */,
+				0E7925192329BDBE00058B94 /* Resources */,
+			);
+			buildRules = (
+			);
+			name = "Share Extension";
+			productName = ShareExtension;
+			productReference = 0E79251B2329BDBE00058B94 /* Share Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E33380702F30AD1500BDE628 /* GifskiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E333807F2F30AD1500BDE628 /* Build configuration list for PBXNativeTarget "GifskiTests" */;
+			buildPhases = (
+				E333806D2F30AD1500BDE628 /* Sources */,
+				E333806E2F30AD1500BDE628 /* Frameworks */,
+				E333806F2F30AD1500BDE628 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E33380762F30AD1500BDE628 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E33380722F30AD1500BDE628 /* Tests */,
+			);
+			name = GifskiTests;
+			productName = GifskiTests;
+			productReference = E33380712F30AD1500BDE628 /* GifskiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E3AE62821E5CD2F300035A2F /* Gifski */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3AE62901E5CD2F300035A2F /* Build configuration list for PBXNativeTarget "Gifski" */;
+			buildPhases = (
+				E36D89991EFF79F7005042A8 /* SwiftLint */,
+				E3AE627F1E5CD2F300035A2F /* Sources */,
+				E3AE62801E5CD2F300035A2F /* Frameworks */,
+				E3AE62811E5CD2F300035A2F /* Resources */,
+				0E7925292329BDBE00058B94 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FF0DFFD278BA5E200A80F09 /* PBXTargetDependency */,
+				0E7925272329BDBE00058B94 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E31053F12DCBD2EA008B7E7F /* Crop */,
+				E31053F82DCBD325008B7E7F /* Components */,
+				E39128F52E0DF96C0010E6CF /* Preview */,
+			);
+			name = Gifski;
+			packageProductDependencies = (
+				E3339E922395766800303839 /* Defaults */,
+				E3339E9C2395789500303839 /* DockProgress */,
+				E36BD7A42B9E2C2400B8D86C /* ExtendedAttributes */,
+				E3AE7E9A2E8AE01F00D22FF8 /* Sentry */,
+			);
+			productName = Gifski;
+			productReference = E3AE62831E5CD2F300035A2F /* Gifski.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3AE627B1E5CD2F300035A2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2640;
+				ORGANIZATIONNAME = "Sindre Sorhus";
+				TargetAttributes = {
+					0E79251A2329BDBE00058B94 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					E33380702F30AD1500BDE628 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = E3AE62821E5CD2F300035A2F;
+					};
+					E3AE62821E5CD2F300035A2F = {
+						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = E3AE627E1E5CD2F300035A2F /* Build configuration list for PBXProject "Gifski" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E3AE627A1E5CD2F300035A2F;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E3339E912395766800303839 /* XCRemoteSwiftPackageReference "Defaults" */,
+				E3339E9B2395789500303839 /* XCRemoteSwiftPackageReference "DockProgress" */,
+				E3998CF02ACD7148009F8117 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+				E36BD7A32B9E2C1600B8D86C /* XCRemoteSwiftPackageReference "ExtendedAttributes" */,
+			);
+			preferredProjectObjectVersion = 100;
+			productRefGroup = E3AE62841E5CD2F300035A2F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5F6ABD7E278BA5A20040DDF0 /* Products */;
+					ProjectRef = 5F6ABD7D278BA5A20040DDF0 /* gifski.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E3AE62821E5CD2F300035A2F /* Gifski */,
+				0E79251A2329BDBE00058B94 /* Share Extension */,
+				E33380702F30AD1500BDE628 /* GifskiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E310540F2DCBEB4A008B7E7F /* libgifski_static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgifski_static.a;
+			remoteRef = E310540E2DCBEB4A008B7E7F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E7925192329BDBE00058B94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		E333806F2F30AD1500BDE628 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		E3AE62811E5CD2F300035A2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				E3AE62891E5CD2F300035A2F /* Assets.xcassets in Resources */,
+				E3AE7E9D2E8AE0A100D22FF8 /* AppIcon.icon in Resources */,
+				E31A4F3124AD36870097B1A5 /* InternetAccessPolicy.json in Resources */,
+				E3C3DB4F203F154300CB8BB9 /* Credits.rtf in Resources */,
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E36D89991EFF79F7005042A8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			name = SwiftLint;
+			shellPath = /bin/sh;
+			shellScript = (
+				"PATH=\"/opt/homebrew/bin/:${PATH}\"",
+				"swiftlint",
+				"",
+			);
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E7925172329BDBE00058B94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				E3FC365E2377FA9F00CF7C59 /* Shared.swift in Sources */,
+			);
+		};
+		E333806D2F30AD1500BDE628 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		E3AE627F1E5CD2F300035A2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				E3D08F6E1E5D7BFD00F465DF /* Utilities.swift in Sources */,
+				E339F011203820ED003B78FB /* GIFGenerator.swift in Sources */,
+				E33552F12ACAC3280023AAE9 /* AppState.swift in Sources */,
+				E3A6BD112245345C00F62256 /* Constants.swift in Sources */,
+				C2040B8920435871004EE259 /* GifskiWrapper.swift in Sources */,
+				E33A02D12F346A9200FD4360 /* SettingsScreen.swift in Sources */,
+				8588EB0D22A424B800030A59 /* ResizableDimensions.swift in Sources */,
+				E3908B7426754568000723A7 /* EstimatedFileSize.swift in Sources */,
+				E33552F32ACAC5D80023AAE9 /* StartScreen.swift in Sources */,
+				E37F68E42ACADA40007F1A7F /* EditScreen.swift in Sources */,
+				E3961F802AC9F2A700708EB7 /* Intents.swift in Sources */,
+				E30C8EEF29387E7A002E053F /* Gifski.swift in Sources */,
+				0CBD7F2E2E0F044C00E2C5E4 /* ExportModifiedVideo.swift in Sources */,
+				E3FC365C2377FA0000CF7C59 /* Shared.swift in Sources */,
+				E37F68E02ACAD9D1007F1A7F /* CompletedScreen.swift in Sources */,
+				E33552EF2ACAC3190023AAE9 /* MainScreen.swift in Sources */,
+				E37F68E22ACAD9F1007F1A7F /* ConversionScreen.swift in Sources */,
+				85A5C44822CA41B500CAA94D /* VideoValidator.swift in Sources */,
+				E3AE62871E5CD2F300035A2F /* App.swift in Sources */,
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E7925272329BDBE00058B94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E79251A2329BDBE00058B94 /* Share Extension */;
+			targetProxy = 0E7925262329BDBE00058B94 /* PBXContainerItemProxy */;
+		};
+		5FF0DFFD278BA5E200A80F09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "gifski-staticlib";
+			targetProxy = 5FF0DFFC278BA5E200A80F09 /* PBXContainerItemProxy */;
+		};
+		E33380762F30AD1500BDE628 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3AE62821E5CD2F300035A2F /* Gifski */;
+			targetProxy = E33380752F30AD1500BDE628 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E79252A2329BDBE00058B94 /* Debug configuration for PBXNativeTarget "Share Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "Share Extension/Share_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = YG56YK5RN5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Share Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Gifski;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sindresorhus.Gifski.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0E79252B2329BDBE00058B94 /* Release configuration for PBXNativeTarget "Share Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "Share Extension/Share_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = YG56YK5RN5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Share Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Gifski;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sindresorhus.Gifski.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E33380772F30AD1500BDE628 /* Debug configuration for PBXNativeTarget "GifskiTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YG56YK5RN5;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sindresorhus.GifskiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gifski.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Gifski";
+			};
+			name = Debug;
+		};
+		E33380782F30AD1500BDE628 /* Release configuration for PBXNativeTarget "GifskiTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YG56YK5RN5;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sindresorhus.GifskiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gifski.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Gifski";
+			};
+			name = Release;
+		};
+		E3AE628E1E5CD2F300035A2F /* Debug configuration for PBXProject "Gifski" */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3805F542466E68900489E6C /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = YG56YK5RN5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E3AE628F1E5CD2F300035A2F /* Release configuration for PBXProject "Gifski" */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3805F542466E68900489E6C /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = YG56YK5RN5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		E3AE62911E5CD2F300035A2F /* Debug configuration for PBXNativeTarget "Gifski" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Gifski/Gifski.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = YG56YK5RN5;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_FILE_ACCESS_DOWNLOADS_FOLDER = readwrite;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Gifski/Info.plist";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MTL_LANGUAGE_REVISION = Metal20;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sindresorhus.Gifski;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Gifski/Gifski-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E3AE62921E5CD2F300035A2F /* Release configuration for PBXNativeTarget "Gifski" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Gifski/Gifski.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = YG56YK5RN5;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_FILE_ACCESS_DOWNLOADS_FOLDER = readwrite;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Gifski/Info.plist";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MTL_LANGUAGE_REVISION = Metal20;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sindresorhus.Gifski;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Gifski/Gifski-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E7925302329BDBE00058B94 /* Build configuration list for PBXNativeTarget "Share Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E79252A2329BDBE00058B94 /* Debug configuration for PBXNativeTarget "Share Extension" */,
+				0E79252B2329BDBE00058B94 /* Release configuration for PBXNativeTarget "Share Extension" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		E333807F2F30AD1500BDE628 /* Build configuration list for PBXNativeTarget "GifskiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E33380772F30AD1500BDE628 /* Debug configuration for PBXNativeTarget "GifskiTests" */,
+				E33380782F30AD1500BDE628 /* Release configuration for PBXNativeTarget "GifskiTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		E3AE627E1E5CD2F300035A2F /* Build configuration list for PBXProject "Gifski" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3AE628E1E5CD2F300035A2F /* Debug configuration for PBXProject "Gifski" */,
+				E3AE628F1E5CD2F300035A2F /* Release configuration for PBXProject "Gifski" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		E3AE62901E5CD2F300035A2F /* Build configuration list for PBXNativeTarget "Gifski" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3AE62911E5CD2F300035A2F /* Debug configuration for PBXNativeTarget "Gifski" */,
+				E3AE62921E5CD2F300035A2F /* Release configuration for PBXNativeTarget "Gifski" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E3339E912395766800303839 /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.6;
+			};
+		};
+		E3339E9B2395789500303839 /* XCRemoteSwiftPackageReference "DockProgress" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/DockProgress";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+		E36BD7A32B9E2C1600B8D86C /* XCRemoteSwiftPackageReference "ExtendedAttributes" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/ExtendedAttributes";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		E3998CF02ACD7148009F8117 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E3339E922395766800303839 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E3339E912395766800303839 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+		E3339E9C2395789500303839 /* DockProgress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E3339E9B2395789500303839 /* XCRemoteSwiftPackageReference "DockProgress" */;
+			productName = DockProgress;
+		};
+		E36BD7A42B9E2C2400B8D86C /* ExtendedAttributes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E36BD7A32B9E2C1600B8D86C /* XCRemoteSwiftPackageReference "ExtendedAttributes" */;
+			productName = ExtendedAttributes;
+		};
+		E3AE7E9A2E8AE01F00D22FF8 /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E3998CF02ACD7148009F8117 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E3AE627B1E5CD2F300035A2F /* Project object */;
+}

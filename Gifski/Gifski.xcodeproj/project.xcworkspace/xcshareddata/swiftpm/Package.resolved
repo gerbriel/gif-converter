@@ -1,0 +1,51 @@
+{
+  "originHash" : "0c90c366404e200efeaefbb832e9ea0e7faea9e1f96c7c74f6e39e86d8f25618",
+  "pins" : [
+    {
+      "identity" : "defaults",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/Defaults",
+      "state" : {
+        "revision" : "5bfac4928f000fabdbef7e4ed0251399bb0841c9",
+        "version" : "9.0.8"
+      }
+    },
+    {
+      "identity" : "dockprogress",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/DockProgress",
+      "state" : {
+        "revision" : "43ca0137201a479fbd891b129155f4a84c1e1b13",
+        "version" : "5.1.0"
+      }
+    },
+    {
+      "identity" : "extendedattributes",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/ExtendedAttributes",
+      "state" : {
+        "revision" : "bf0cade5654fbdc0cfcb3ac34bcc644c156fb902",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "sentry-cocoa",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/getsentry/sentry-cocoa",
+      "state" : {
+        "revision" : "2c420d31d0c31b525fa9e7c552ef0fc9d924befc",
+        "version" : "9.17.1"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax",
+      "state" : {
+        "revision" : "79e4b74a295b6eb74a8b585e3a39d29e70c1dbd1",
+        "version" : "603.0.2"
+      }
+    }
+  ],
+  "version" : 3
+}
